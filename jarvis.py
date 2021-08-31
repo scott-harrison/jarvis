@@ -1,9 +1,15 @@
+import pyjokes
 from datetime import datetime
 from ai import AI
 
 jarvis = AI()
 
 command = ""
+
+def joke():
+    joke = pyjokes.get_joke()
+    print(joke)
+    jarvis.say(joke)
 
 while True and command != "goodbye":
     command = jarvis.listen()
@@ -24,3 +30,6 @@ while True and command != "goodbye":
 
         message = "Good " + message + " sir"
         jarvis.say(message)
+    if command in ["tell me a joke", "give me a joke", "tell me another joke", "give me another joke"]:
+        joke_sentence = joke()
+        jarvis.say(joke_sentence)
