@@ -9,6 +9,10 @@ class AI():
 
         with self.mic as source:
             self.recognizer.adjust_for_ambient_noise(source)
+
+    def say(self, sentence):
+        self.engine.say(sentence)
+        self.engine.runAndWait()
     
     def listen(self):
         print("Listening...")

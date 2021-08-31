@@ -9,4 +9,4 @@ while True and command != "goodbye":
     print("Command was:", command)
 
     if command in ["hello", "hi"]:
-        print("Hello sir")
+        jarvis.say("Hello sir, how can I be of assistance?")
